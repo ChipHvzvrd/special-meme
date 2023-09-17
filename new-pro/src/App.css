@@ -63,3 +63,15 @@
     transform: rotate(-360deg);
   }
 }
+
+/*-----Navbar CSS-----*/
+
+#nav-logo {
+  width: 10vw;
+  border-radius: 50%;
+  opacity: 80%;
+}
+
+#navBar ul {
+  list-style-type: none;
+}

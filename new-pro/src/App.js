@@ -1,11 +1,13 @@
 import './App.css';
 import About from '../src/components/About';
+import Navbar from './components/Navbar';
 import hex from './photos/hex_grid.png';
 
 function App() {
   return (
     <div>
       <main>
+        <Navbar></Navbar>
         <About></About>
       </main>
       <div>
