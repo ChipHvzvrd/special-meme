@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'hexa';
+  src: url(../src/assets/fonts/Hexa.ttf);
+}
+
 .App {
   text-align: center;
 }
@@ -65,6 +70,16 @@
 }
 
 /*-----Navbar CSS-----*/
+#navBar {
+  float:none;
+  left: 50%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  font-family: hexa;
+}
+
 
 #nav-logo {
   width: 10vw;
@@ -74,4 +89,10 @@
 
 #navBar ul {
   list-style-type: none;
+  display:inline-flex;
+  padding-top: 0px;
+}
+
+#navBar li {
+  margin-left: 20px;
 }

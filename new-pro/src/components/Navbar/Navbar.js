@@ -1,38 +1,22 @@
-import React from "react";
-import logo from '../../photos/logo_icon.png';
+import React, { useState } from "react";
+import { capitalizeFirstLetter } from "../../utils/helpers";
+import logo from '../../assets/photos/logo_icon.png';
 
-const categories = [
-    {
-        name: "Websites",
-        description:
-        "Photos of websites that I have built",
-    },
-    {
-        name:"Technologies",
-        description:
-        "Technologies I use in development",
-    },
-    {
-        name:"Experience",
-        description:
-        "Previous Experience",
-    }
-]
 
-function Navbar() {
+function Navbar(props) {
 
-    function categorySelected(name) {
-        console.log(`${name} clicked`)
-    }
+    const {
+        categories = [],
+        setCurrentCategory,
+        currentCategory,
+    } = props;
 
     return(
-        <header>
-            <h2>
-                <a href="/">
+        <header className="flex-row px-1">
+            <nav id="navBar">
+            <a data-testid="link" href="/">
                     <span role="img" aria-label="logo"><img id="nav-logo" src= {logo} /></span>
                 </a>
-            </h2>
-            <nav id="navBar">
                 <ul className="flex-row">
                     <li className="mx-2">
                         <a href="#about">
@@ -43,9 +27,12 @@ function Navbar() {
                         <span>Contact</span>
                     </li>
                     {categories.map((category) => (
-                        <li className="mx-1" key={category.name}>
-                            <span onClick= {() => categorySelected(category.name)}>{category.name}</span>
-                            </li>
+                        <li className={`mx-1 ${
+                            currentCategory.name === category.name && 'navActive'
+                        }`} key={category.name}>
+                            <span onClick={() => {setCurrentCategory(category)}}>{capitalizeFirstLetter(category.name)}</span>
+
+                        </li>
                     ))}
                     <li></li>
                 </ul>
