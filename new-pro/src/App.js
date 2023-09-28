@@ -1,6 +1,6 @@
 import './App.css';
-import About from '../src/components/About';
-import Navbar from './components/Navbar';
+import About from './components/About/About';
+import Navbar from './components/Navbar/Navbar.js';
 import hex from './photos/hex_grid.png';
 
 function App() {

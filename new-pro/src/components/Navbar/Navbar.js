@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../photos/logo_icon.png';
+import logo from '../../photos/logo_icon.png';
 
 const categories = [
     {
